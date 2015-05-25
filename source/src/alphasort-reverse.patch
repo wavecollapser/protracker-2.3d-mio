@@ -1,0 +1,62 @@
+Index: pt_diskop.c
+===================================================================
+--- pt_diskop.c	(revision 1)
++++ pt_diskop.c	(working copy)
+@@ -491,8 +491,19 @@
+     // fill disk op. buffer (path, filename, size, date, type (dir/file))
+ 
+     fileIndex = 0;
+-    while ((ent = readdir(dir)) != NULL)
++    struct dirent **namelist;
++    int n;
++
++    n = scandir(".", &namelist, 0, alphasort);
++
++    if (n < 0)
++        perror("scandir error reading dir..");
++
++    int q; // reverse the alphasort, since it doesn't have a reverse, we want A before W in filelist
++    for (q=0;q<n;++q)
+     {
++	ent=(struct dirent *) namelist[q];
++
+         if (editor.diskop.forceStopReading)
+             return (false);
+ 
+@@ -591,6 +602,7 @@
+     }
+ 
+     closedir(dir);
++    free(namelist);
+ 
+     if (!input.mouse.buttonErrorMsgActive)
+     {
+@@ -677,8 +689,19 @@
+     // fill disk op. buffer (path, filename, size, date, type (dir/file))
+ 
+     fileIndex = 0;
+-    while ((ent = readdir(dir)) != NULL)
++    struct dirent **namelist;
++    int n;
++
++    n = scandir(".", &namelist, 0, alphasort);
++
++    if (n < 0)
++        perror("scandir error reading dir..");
++
++    int q; // reverse the alphasort, since it doesn't have a reverse, we want A before W in filelist
++    for (q=0;q<n;++q)
+     {
++	ent=(struct dirent *) namelist[q];
++
+         if (editor.diskop.forceStopReading)
+             return (false);
+ 
+@@ -750,6 +773,7 @@
+     }
+ 
+     closedir(dir);
++    free(namelist);
+ 
+     pointerSetPreviousMode();
+     setPrevStatusMessage();

@@ -1,0 +1,49 @@
+Compiled binaries are always available at http://www.16-bits.org/
+
+== COMPILING PROTRACKER ON WINDOWS XP ==
+ 1. Install MinGW
+ 2. Download http://www.libsdl.org/release/SDL-devel-1.2.15-mingw32.tar.gz
+ 3. Copy the folder SDL-devel-1.2.15-mingw32.tar.gz\lib to drive:\MinGW\
+ 4. Copy the folder SDL-devel-1.2.15-mingw32.tar.gz\include to drive:\MinGW\
+ 5. Copy SDL-devel-1.2.15-mingw32.tar.gz\bin\SDL.dll to protracker-code\bin\
+ 6. Edit the PATH= in protracker-code\make-mingw.bat to point to where
+     MinGW\bin is
+ 7. Run protracker-code\make-mingw.bat
+    
+== COMPILING PROTRACKER ON WINDOWS VISTA OR NEWER ==
+ 1. You need Visual Studio 2010 or newer (free):
+     http://go.microsoft.com/?linkid=9709949
+ 2. Wait patiently while you install it
+ 3. Open protracker.sln found in protracker-code\vcpp2010_project
+     (will be converted if using a newer Visual Studio)
+ 4. Press F7 to compile the program.
+ 5. Done! The executables are now in protracker-code\bin\
+  
+== COMPILING PROTRACKER ON MAC OS X ==
+ 1. Install XCode. It's in the "Optional Installs" folder in your
+     OS X Install DVD that came with your mac.
+    If you don't have the disk, download the latest XCode
+     (+ Command Line Tools package) from
+     https://developer.apple.com/xcode/downloads/
+ 2. Download the SDL Runtime Libraries for Mac OS X here:
+    Intel OS X 10.5 and up: http://www.libsdl.org/release/SDL-1.2.15.dmg
+      PPC OS X 10.4 and up: http://www.libsdl.org/release/SDL-1.2.15-OSX10.4.dmg
+ 3. Inside the downloaded file you'll find SDL.framework, copy that folder
+     to /Library/Frameworks
+ 4. Open the Terminal (Applications/Utilities/Terminal) and run the following:
+     svn checkout svn://svn.code.sf.net/p/protracker/code/trunk protracker-code
+     cd protracker-code
+     chmod +x make-os-x.sh
+     ./make-os-x.sh
+ 5. Done! The executables are now in protracker-code/bin/
+    
+== COMPILING PROTRACKER ON LINUX ==
+ 1. Install gcc, subversion (svn) and SDL 1.2 dev (google it)
+ 2. Open a terminal and run the following:
+     svn checkout svn://svn.code.sf.net/p/protracker/code/trunk protracker-code
+     cd protracker-code
+     chmod +x make-linux.sh (make-freebsd.sh for FreeBSD)
+     ./make-linux.sh        (make-freebsd.sh for FreeBSD)
+ 3. Done! The executables are now in protracker-code/bin/
+         
+EOF

@@ -1,0 +1,69 @@
+This project is using SDL 1.2.15:
+--------------------------------------------------------------------------------
+The Simple DirectMedia Layer (SDL for short) is a cross-platfrom library
+designed to make it easy to write multi-media software, such as games and
+emulators.
+
+The Simple DirectMedia Layer library source code is available from:
+http://www.libsdl.org/
+
+This library is distributed under the terms of the GNU LGPL license:
+http://www.gnu.org/copyleft/lesser.html
+--------------------------------------------------------------------------------
+
+
+Three files in this project have code from other projects, which are
+not public domain. These files are as follows:
+
+
+pt_dirent.c and pt_dirent.h:
+(code taken from dirent-1.10.zip->dirent.h and modified)
+
+http://softagalleria.net/dirent.php
+--------------------------------------------------------------------------------
+dirent.h - dirent API for Microsoft Visual Studio
+
+Copyright (C) 2006-2012 Toni Ronkko
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+``Software''), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED ``AS IS'', WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL TONI RONKKO BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+--------------------------------------------------------------------------------
+
+
+OpenGL parts of pt_visuals.c:
+(code taken from dosbox_svn->trunk->src->gui->sdlmain.cpp and modified)
+
+http://sourceforge.net/projects/dosbox/
+--------------------------------------------------------------------------------
+Copyright (C) 2002-2015  The DOSBox Team
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+--------------------------------------------------------------------------------
