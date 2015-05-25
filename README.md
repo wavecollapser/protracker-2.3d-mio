@@ -1,6 +1,6 @@
 # protracker-2.3d-mio
 
-this protracker for Linux branch is fetched from Sourceforge
+this protracker for Linux branch is fetched from Sourceforge, but with a few small changes by me
 
 it implements a fix for sorting filenames by names, so if you got 1000 modules/samples you can easily have an overview
 
